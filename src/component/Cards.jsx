@@ -2,7 +2,6 @@ import { CiStar } from "react-icons/ci";
 import img from "../assets/img/banner.jpg";
 import style from "../assets/sass/card.module.scss";
 export default function Card() {
-  console.log(style);
   return (
     <div className={style.box}>
       <header>
