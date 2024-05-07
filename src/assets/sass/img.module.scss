@@ -1,0 +1,57 @@
+@mixin position(){
+  position: absolute;
+  font-size: 23px;
+}
+
+.img{
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+  position: relative;
+  img{
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px orange solid;
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: rgb(3, 152, 3);
+    border-radius: 50%;
+    left: -8px;
+  }
+  .iconSecurity{
+    @include position();
+    right: -6px;
+    top: -6px;
+    color: rgb(213, 43, 43);
+  }
+  .iconVerified{
+    @include position();
+    right: -6px;
+    bottom: -6px;
+    color: rgb(21, 130, 138);
+  }
+  .hexa{
+    position: relative;
+    .iconHexa{
+      @include position();
+      left: -6px;
+      bottom: -6px;
+      color: rgb(61, 8, 151);
+    }
+    span{
+      position: absolute;
+      bottom: -8px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
